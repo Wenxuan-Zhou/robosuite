@@ -128,7 +128,7 @@ class Wrapper:
             def hooked(*args, **kwargs):
                 result = orig_attr(*args, **kwargs)
                 # prevent wrapped_class from becoming unwrapped
-                if result == self.env:
+                if result is self.env:
                     return self
                 return result
 

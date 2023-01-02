@@ -11,3 +11,4 @@ class MujocoWorldBase(MujocoXML):
         # Modify the simulation timestep to be the requested value
         options = find_elements(root=self.root, tags="option", attribs=None, return_first=True)
         options.set("timestep", convert_to_string(macros.SIMULATION_TIMESTEP))
+        options.set("noslip_iterations", convert_to_string(macros.NOSLIP_ITERATIONS))
